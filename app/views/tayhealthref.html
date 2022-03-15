@@ -26,12 +26,19 @@
           <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
         </div>
 
-        <div class="govuk-inset-text">
-          If you do not have a referral, please speak to your GP to see if you are eligible
-        </div>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Don't have a referral?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            If you do not have a referral, please speak to your GP to see if you are eligible.
+          </div>
+        </details>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
-
+        
       </form>
 
     </div>

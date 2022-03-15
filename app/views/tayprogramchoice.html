@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">We would like to know more</h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="choice-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Why have you decided to participate in this program?
+              </h1>
+            </legend>
+            <div id="choice-hint" class="govuk-hint">
+              Select all that apply.
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="choice" name="choice" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="choice">
+                  I want to be healthier
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="choice-2" name="choice" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="choice-2">
+                  I could use the extra money
+                </label>
+            </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="choice-3" name="choice" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="choice-3">
+                  Other reasons
+                </label>
+                <p><br></p>
+                <div class="govuk-form-group">
+                  <div id="more-detail-hint" class="govuk-hint">
+                    Please describe why you are interested in participating in this program.
+                  </div>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
