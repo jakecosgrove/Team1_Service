@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">GP or healthcare referral</h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <p>To access this program, you need to have a referral from an accredited GP or healthcare provider.</p>
+
+        <div class="govuk-inset-text">
+          If you do not have a referral, please speak to your GP to see if you are eligible
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="file-upload-1">
+            Upload referral document
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
