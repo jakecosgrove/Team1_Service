@@ -13,22 +13,60 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Income Details</h1>
+      <h1 class="govuk-heading-xl">Your annual income</h1>
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="pelinUCquestion" method="post">
 
         <p></p>
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-              What is your annual income?
-            </label>
-          </h1>
-          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        
+                <p class="govuk-body">
+                  To be eligible for the Get Active Rewards programe, you annual income should be £20,000 or below.  <a href="#" class="govuk-link">See the eligibility criteria</a>.
+                </p>
+        
+                <p class="govuk-body">
+                </p>
+        
+                <p class="govuk-body">
+                </p>
+        
+                <p class="govuk-body">
+                </p>
+        
+                <form action="/form-handler" method="post" novalidate>
+        
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Is your annual income £20,000 or below?
+                      </legend>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="interview-needs" name="interview-needs" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="interview-needs">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="interview-needs-2" name="interview-needs" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="interview-needs-2">
+                            No
+                          </label>
+                        </div>
+                      </div>
+        
+                    </fieldset>
+                  </div>
+        
+                  <button class="govuk-button" data-module="govuk-button">
+                    Continue
+                  </button>
+                </form>
+              </div>
+            </div>
+          </main>
         </div>
 
         <p></p>
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
 
