@@ -15,28 +15,77 @@
 
       <h1 class="govuk-heading-xl">GP or healthcare referral</h1>
 
-      <form class="form" action="tayage" method="post">
+      <form class="form" action="tayhealthnum" method="post">
 
-        <p>To access this program, you need to have a referral from an accredited GP or healthcare provider.</p>
+        <h2 class="govuk-heading-m">To access this program, you need to have a referral from an accredited GP or healthcare provider.</h2>
+        <p>Please enter the name and address of your GP or healthcare provider provider. <br>You can find this information on your referral document.</p>
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="file-upload-1">
-            Upload referral document
-          </label>
-          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-        </div>
+        <fieldset class="govuk-fieldset">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Don't have a referral?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              If you do not have a referral, please speak to your GP to see if you are eligible.
+            </div>
+          </details>
 
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Don't have a referral?
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            If you do not have a referral, please speak to your GP to see if you are eligible.
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              
+            </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="referral-name">
+              Name of GP or healthcare provider <span class="govuk-visually-hidden"></span>
+            </label>
+            <input class="govuk-input" id="referral-name" name="referral-name" type="text" autocomplete="referral-name">
           </div>
-        </details>
+          
+          
+          
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-1">
+                Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+              </label>
+              <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+            </div>
+          
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-2">
+                <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+              </label>
+              <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+            </div>
+          
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+            </div>
+          
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-county">
+                County
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+            </div>
+          
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+            </div>
+          
+          </fieldset>
 
+         
+        </fieldset>
+     
         <button class="govuk-button" data-module="govuk-button">Continue</button>
         
       </form>
