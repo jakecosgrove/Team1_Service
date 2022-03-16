@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Benefits</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Financial support if you're on a low income</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Activity Credit
+      </h1>
+
+      <p class="govuk-body-m">Contents</p>
+<!-- Need to add dashes to list elements -->
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="jake-what-is-activity-credit">What Activity Credit is</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">How it works</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Eligibility</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">What you'll get</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">How you're paid</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">How to claim</a>
+        </li>
+      </ul>
+      
+      <div>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">  
+                               
+    </div>
+
+  </div>
+
+  <div class="govuk-width-container">
+  
+    <main class="govuk-main-wrapper">
+  
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-m">How to claim</h1>
+          <p class="govuk-body">This is a paragraph that tells users how they can claim for Activity Credit</p>
+          <p class="govuk-body">You will need:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>something</li>
+            <li>something else</li>
+            <li>another thing</li>
+          </ul>
+
+          <a href="jake-start" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+            Apply now
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+            </svg>
+          </a>
+
+        </div>
+  <!--Need to add blue section break above 'related content' column-->
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-s">Related content</h2>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="jake-what-is-activity-credit">This is some related content</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">This is some more related content</a>
+            </li>
+        </div>
+      </div>
+  
+    <div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+       <h1 class="govuk-heading-m">Some more information</h1>
+       <p class="govuk-body">This is a paragraph inside a two-thirds wide column so it should stay in this two thirds position</p>
+
+       <h1 class="govuk-heading-m">Some more information</h1>
+       <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+
+       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+       <a href="/docs/tutorials-and-examples">View a printable version of the whole guide</a>
+     </div>
+    </div>
+
+
+
+    </main>
+  </div>
+
+{% endblock %}
