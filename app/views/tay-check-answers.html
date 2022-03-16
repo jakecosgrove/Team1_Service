@@ -12,7 +12,7 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+      <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
 
       <h2 class="govuk-heading-m">Personal details</h2>
 
@@ -22,7 +22,7 @@
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Sarah Philips
+            {{ data['full-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -36,7 +36,7 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            5 January 1978
+            {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -47,12 +47,12 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Contact information
+            Address
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+            58 Hippo Road
+            <br>Hippoland
+            <br>MK13 0BA
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -66,8 +66,23 @@
             Contact details
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>07700 900457</p>
-            <p>sarah.phillips@example.com</p>
+            <p>{{ data['telephone-number'] }}</p>
+            <p>{{ data['email'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reasons for participation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{ data['choice'] }}</p>
+            <p>{{ data['more-detail'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -78,29 +93,29 @@
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">Application details</h2>
+      <h2 class="govuk-heading-m">Referral details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Previous application number
+            Referral number
           </dt>
           <dd class="govuk-summary-list__value">
-            502135326
+            {{ data['refnumber'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> previous application number</span>
+              <span class="govuk-visually-hidden"> Referral number</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence type
+            Name of GP or <br> healthcare provider
           </dt>
           <dd class="govuk-summary-list__value">
-            For personal use
+            {{ data['referral-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -111,31 +126,77 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Home address
+            GP or healthcare <br>provider address
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+            {{ data['address-line-1'] }}{{ data['address-line-2'] }}
+            <br>{{ data['address-town'] }}
+            <br>{{ data['address-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> home address</span>
+              <span class="govuk-visually-hidden"> GP or healthcare provider address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m">Income details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> National insurance number</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence period
+            Are you receiving benefits?
           </dt>
           <dd class="govuk-summary-list__value">
-            Valid for 6 months
+            {{ data['where-do-you-live'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> licence period</span>
+              <span class="govuk-visually-hidden"> Are you receiving benefits</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Is your income less than £20,000 per year?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['interview-needs'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Income less than 20k per year</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Evidence of income
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['file-upload-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Income evidence</span>
             </a>
           </dd>
         </div>
