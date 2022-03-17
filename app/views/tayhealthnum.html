@@ -16,13 +16,18 @@
       <h1 class="govuk-heading-l">Referral number from your GP or healthcare provider</h1>
 
       <form class="form" action="pelinNInumber" method="post">
-
+        
+        <p></p>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="width-10">
-            Please enter the referral number from your GP or healthcare provider
+          <label class="govuk-label" for="national-insurance-number">
+            Please enter your referral number
           </label>
-          <input class="govuk-input govuk-input--width-10" id="width-10" name="refnumber" type="text">
+          <div id="national-insurance-number-hint" class="govuk-hint">
+            For example, ‘AC 123 456’.
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
         </div>
+        <p></p>
 
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
