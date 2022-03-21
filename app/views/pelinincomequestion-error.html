@@ -13,10 +13,47 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Do you have £16,000 or less in money, savings and investments?</h1>
-
       <form class="form" action="pelinincomeevidence" method="post">
         
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#passport-issued-day">The date your passport was issued must be in the past</a>
+              </li>
+              <li>
+                <a href="#postcode-input">Enter a postcode, like AA1 1AA</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {% if data.error ==='400'%}
+        <div class="govuk-form-group govuk-form-group--error">
+          {% else %}
+          <div class="govuk-form-group">
+          {% endif %}
+
+          {% if data.error === '400' %}
+          <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+          {% else %}
+          <fieldset class="govuk-fieldset">
+          {% endif %}
+ 
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Where do you live?
+              </h1>
+            </legend>
+            {% if data.error === '400' %}<p id="where-do-you-live-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Select the country where you live
+            </p>
+            {% endif %}
+ 
+
                 <form action="/form-handler" method="post" novalidate>
         
                   <div class="govuk-form-group">
@@ -39,19 +76,21 @@
                         </div>
                       </div>
         
+                      
                     </fieldset>
                   </div>
-        
-                  <button class="govuk-button" data-module="govuk-button">
-                    Continue
-                  </button>
+                  
+                                  
                 </form>
               </div>
             </div>
           </main>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
         </div>
 
-        <p></p>
+        
 
       </form>
 
