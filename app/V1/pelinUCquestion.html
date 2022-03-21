@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  income question benefits – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Are you receiving any of the benefits listed below?</h1>
+
+      <form class="form" action="pelinNInumber" method="post">
+        
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>income-based jobseeker’s allowance</li>
+          <li>income support</li>
+          <li>universal credit</li>
+          <li>housing benefit</li>
+          <li>council tax benefit</li>
+          <li>state pension credit</li>
+          <li>carer’s allowance</li>
+          <li>attendance allowance</li>
+        </ul>
+        <p></p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+          
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  No
+                </label>
+              </div>
+              
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <p></p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['first-name'] }} {{ data['last-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{ data['sort'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{ data['telephone-number'] }}</p>
+            <p>{{ data['email'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reasons for participation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{ data['choice'] }}</p>
+            <p>{{ data['more-detail'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Referral details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Referral number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['refnumber'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Referral number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name of GP or <br> healthcare provider
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['referral-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            GP or healthcare <br>provider address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }}{{ data['address-line-2'] }}
+            <br>{{ data['address-town'] }}
+            <br>{{ data['address-postcode'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> GP or healthcare provider address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m">Income details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> National insurance number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Are you receiving benefits?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['where-do-you-live'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Are you receiving benefits</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Less than £16000 in income per year?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['interview-needs'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Income less than 20k per year</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Evidence of income
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['file-upload-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Income evidence</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="jake-confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

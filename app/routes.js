@@ -6,6 +6,7 @@ router.post('/pelinincomequestion', function (req, res) {
 
     //make a variable and give it the value from 'pelinincomequestion'
     var Over16k = req.session.data['interview-needs']
+        // Note: above is the radio answers name
         // Check whether the variable matches a condition
    if (Over16k == "No"){
    // Send user to next page
