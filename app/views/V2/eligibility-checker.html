@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your eligibility – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Activity Credit</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Eligibility</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1> -->
+
+      <h1 class="govuk-heading-l govuk-!-margin-top-6">Find out if you may be eligible for Activity Credit</h1>
+
+      <p class="govuk-body">Answer these questions to find out if are eligible to apply for Activity Credit.</p>
+
+      <a href="/V2/eligibility-income" role="button" class="govuk-button">Continue</a>
+
+
+    </div>
+
+      </div>
+{% endblock %}

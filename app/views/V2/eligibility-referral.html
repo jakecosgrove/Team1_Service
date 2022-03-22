@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Eligibility referral – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Do you have a referral number from your GP?</h1>
+
+      <form class="form" action="/V2/referral-number" method="post">
+
+        <p>Your GP should have given you a referral number to apply for {{[serviceName]}}.</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="eligibility-referral-check" name="eligibility-referral-check" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="eligibility-referral-check">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="eligibility-referral-check-2" name="eligibility-referral-check" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="eligibility-referral-check-2">
+                  No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
