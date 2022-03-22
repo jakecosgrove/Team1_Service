@@ -23,7 +23,9 @@
               Postcode:
             </dt>
             <dd class="govuk-summary-list__value">
-              <b>MK2 3OD
+              <b> 
+                < maxlength="7"
+                {{ data['address-postcode'] }}
               </b>
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -41,9 +43,9 @@
             Choose your address
           </label>
           <select class="govuk-select" id="sort" name="sort">
-            <option value="56 Hippo Road, Hippoland, MK13 0BA">56 Hippo Road, Hippoland, MK13 0BA</option>
-            <option value="57 Hippo Road, Hippoland, MK13 0BA" selected>57 Hippo Road, Hippoland, MK13 0BA</option>
-            <option value="58 Hippo Road, Hippoland, MK13 0BA">58 Hippo Road, Hippoland, MK13 0BA</option>
+            <option value="56 Hippo Road, Hippoland, MK13 0BA">56 Hippo Road, Hippoland</option>
+            <option value="57 Hippo Road, Hippoland, MK13 0BA" selected>57 Hippo Road, Hippoland</option>
+            <option value="58 Hippo Road, Hippoland, MK13 0BA">58 Hippo Road, Hippoland</option>
           </select>
         </div>
 
