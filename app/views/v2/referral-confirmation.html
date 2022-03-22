@@ -13,21 +13,48 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Who made your activity credit referral?</h1>
+      <h1 class="govuk-heading-l">These are the details for your Activity Credit Referral</h1>
 
-      <form class="form" action="pelinincomequestion" method="post">
-
-          <p>This should be your GP or another approved healthcare provider.</p>
-
+      <form class="form" action="what-is-your-name" method="post">
+        <span id="enter-barcode-number-hint" class="govuk-body">
+            <dl class="govuk-summary-list">
+               <div class="govuk-summary-list__row">
+                 <dt class="govuk-summary-list__key">
+                   Name
+                 </dt>
+                 <dd class="govuk-summary-list__value">
+                   Megamedicine
+                 </dd>
+               </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Postcode
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    SN3 4TD
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    ACR number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    ACR 0104 9734
+                  </dd>
+                </div>
+             </dl>
+         </span>
+   
         <fieldset class="govuk-fieldset">
           <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
-                Don't have a referral?
+                If these details are not correct?
               </span>
             </summary>
             <div class="govuk-details__text">
-              You should speak to your GP or another approved healthcare provider to see if you are eligible for activity credit.
+              You can <a href="referral-number">go back and re-enter the Activity Credit Referral number</a>.<br>
+              <br><p>If you still need help? Contact your GP and confirm the details of your Activity Credit Referral. </p>
             </div>
           </details>
 
@@ -35,44 +62,7 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               
             </legend>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="referral-name">
-              Name of GP or healthcare provider <span class="govuk-visually-hidden"></span>
-            </label>
-            <input class="govuk-input" id="referral-name" name="referral-name" type="text" autocomplete="referral-name">
-          </div>
-          
-          
-          
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="address-line-1">
-                Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-              </label>
-              <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
-            </div>
-          
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="address-line-2">
-                <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-              </label>
-              <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
-            </div>
-          
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="address-town">
-                Town or city
-              </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
-            </div>
-                    
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="address-postcode">
-                Postcode
-              </label>
-              <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
-            </div>
-          
+                 
           </fieldset>
 
          
