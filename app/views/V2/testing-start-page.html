@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Testing – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Activity Credit Testing </h1>
+
+    
+
+        <p>Your interviewer will guide you on the user testing steps.</p>
+
+       <a href="https://www.google.com/"> <button class="govuk-button" data-module="govuk-button" >Flow A</button> </a>
+        <br>
+        <a href="https://www.cricinfo.com"><button class="govuk-button" data-module="govuk-button">Flow B</button> </a>
+        <br>
+        <a href="https://www.hippodigital.co.uk"><button class="govuk-button"  data-module="govuk-button">Flow C</button> </a>
+
+  
+
+    </div>
+  </div>
+
+{% endblock %}
