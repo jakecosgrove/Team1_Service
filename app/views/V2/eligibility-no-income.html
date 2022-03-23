@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Eligibility – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+  You're not eligible for Activity Credit – {{ serviceName }} – GOV.UK {% endblock %}
 
 {% block header %}
   <!-- Blank header with no service name for the start page -->
@@ -35,14 +34,25 @@
 
       <h1 class="govuk-heading-l govuk-!-margin-top-6">You're not eligible for Activity Credit</h1>
 
-      <p class="govuk-body">Based on your answer, you cannot get Activity Credit. To get it you must not be working or be earning less than £16,000 per year. You must also have a referral number from your GP.</p>
+      <p class="govuk-body">Based on your answer, you cannot get Activity Credit. To get it you must not be earning more than £16,000 per year.
+      </p>
 
       <p class="govuk-!-margin-top-6">If you’re not sure which benefit to apply for you can check online.</p>
 
       <a href="https://www.gov.uk/benefits-calculators" role="button" class="govuk-button">Find other benefits</a>
 
+<hr>
 
+        <h2 class="govuk-heading-m govuk-!-margin-top-6">Do you still want to apply?</h2>
+
+        <p>
+          You can continue to apply for Activity Credit if you still think you’re eligible for it.
+      </p> 
+  
+   <a href="/start">Continue to apply</a>
+  
     </div>
+
 
       </div>
 {% endblock %}
