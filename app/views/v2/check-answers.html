@@ -22,7 +22,7 @@
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['first-name'] }} {{ data['last-name'] }}
+            {{ data['first-name'] or 'Roberto' }} {{ data['last-name'] or 'la Coopalabra' }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -31,33 +31,34 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date of birth
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
-        </div>
+       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Address
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{ data['sort'] }}
-              <br>{{ data['address-postcode'] }}
+              <br>{{ data['address-postcode'] or 'LS7 4HT' }}
             </p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> contact information</span>
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Preferred contact
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contact-preference'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> preferred contact method</span>
             </a>
           </dd>
         </div>
