@@ -67,8 +67,9 @@
             Contact details
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['contact-by-text'] }}</p>
-            <p>{{ data['email'] }}</p>
+            <p>{{ data['contact-by-email'] or 'cosmo@kramer.com' }}</p>
+            <p>{{ data['contact-by-phone'] or '08 9090 9898'}}</p>
+            <p>{{ data['contact-by-text'] or '07909 501335' }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -94,12 +95,12 @@
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">Referral details</h2>
+      <h2 class="govuk-heading-m">Activity Referral details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Referral number
+            Activity Referral number
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['refnumber'] }}
@@ -116,7 +117,7 @@
             Name of GP or <br> healthcare provider
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['referral-name'] }}
+            Megamedicine
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -130,9 +131,9 @@
             GP or healthcare <br>provider address
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}{{ data['address-line-2'] }}
-            <br>{{ data['address-town'] }}
-            <br>{{ data['address-postcode'] }}
+            14 Richardson Street
+            <br>Chapeltown
+            <br>LS7 4TD
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
