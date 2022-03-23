@@ -13,7 +13,9 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
-
+      
+      <form action="confirmation" method="post" novalidate>
+      
       <h2 class="govuk-heading-m">Personal details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -92,6 +94,20 @@
             </a>
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Earning less than £16000 in income per year?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['eligibility-income-check'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Income less than 20k per year</span>
+            </a>
+          </dd>
+        </div>
         
       </dl>
 
@@ -143,72 +159,13 @@
           </dd>
         </div>
       </dl>
-      <h2 class="govuk-heading-m">Income details</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            National insurance number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['national-insurance-number'] or 'SK 21 43 32 C'}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> National insurance number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Are you receiving benefits?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['where-do-you-live'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> Are you receiving benefits</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Less than £16000 in income per year?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['interview-needs'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> Income less than 20k per year</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Evidence of income
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['file-upload-1'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> Income evidence</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
+      
 
       <h2 class="govuk-heading-m">Now send your application</h2>
 
       <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      <form action="jake-confirmation" method="post" novalidate>
+      
 
         <input type="hidden" name="answers-checked" value="true">
 
