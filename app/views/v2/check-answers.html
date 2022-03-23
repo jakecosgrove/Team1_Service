@@ -53,7 +53,7 @@
             Preferred contact
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['contact-preference'] }}
+            {{ data['contact'] or 'Email'}}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -67,8 +67,9 @@
             Contact details
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['telephone-number'] }}</p>
-            <p>{{ data['email'] }}</p>
+            <p>{{ data['contact-by-email'] or 'cosmo@kramer.com' }}</p>
+            <p>{{ data['contact-by-phone'] }}</p>
+            <p>{{ data['contact-by-text'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -79,30 +80,30 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Reasons for participation
+            National insurance number
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['choice'] }}</p>
-            <p>{{ data['more-detail'] }}</p>
+            {{ data['national-insurance-number'] or 'SK 21 43 32 C'}}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> contact details</span>
+              <span class="govuk-visually-hidden"> National insurance number</span>
             </a>
           </dd>
         </div>
+        
       </dl>
 
-      <h2 class="govuk-heading-m">Referral details</h2>
+      <h2 class="govuk-heading-m">Activity Referral details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Referral number
+            Activity Referral number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['refnumber'] }}
+            {{ data['refnumber'] or 'AR 0104 9734'}}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -116,7 +117,7 @@
             Name of GP or <br> healthcare provider
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['referral-name'] }}
+            Megamedicine
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -130,9 +131,9 @@
             GP or healthcare <br>provider address
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}{{ data['address-line-2'] }}
-            <br>{{ data['address-town'] }}
-            <br>{{ data['address-postcode'] }}
+            14 Richardson Street
+            <br>Chapeltown
+            <br>LS7 4TD
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -150,7 +151,7 @@
             National insurance number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['national-insurance-number'] }}
+            {{ data['national-insurance-number'] or 'SK 21 43 32 C'}}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
