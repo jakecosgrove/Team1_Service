@@ -25,8 +25,8 @@
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-              <label class="govuk-label govuk-checkboxes__label" for="contact">
+              <input class="govuk-checkboxes__input" id="contact-1" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-checkboxes__label" for="contact-1">
                 Email
               </label>
             </div>
@@ -79,7 +79,7 @@
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-phone">
                   {{ data['sort'] }}
-                  <br>{{ data['address-postcode'] }}
+                  <br>{{ data['address-postcode'] or 'LS4 7HT' }}
               
                 </label>
                
