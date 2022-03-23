@@ -41,7 +41,7 @@
 
   <div>
     <br>
-    
+    <!-- we need to update link for UR -->
     <form class="form" action="/V2/apply-for-activity-credit" method="post">
 
       <ul class="govuk-list govuk-list--bullet">
@@ -73,8 +73,20 @@
             <td class="govuk-table__cell">Implemented screening questions so that it's clearer to the user before they apply whether or not they are eligible.</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Reorder of questions</th>
+            <th scope="row" class="govuk-table__header">Reorder of first question</th>
             <td class="govuk-table__cell">Moved the most important questions to the start. Income question now at the start followed by the referral number, as income is a key requirement in order to be eligible.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Removal of benefits question</th>
+            <td class="govuk-table__cell">Not necessary as already asking user for NI, and evidence of income.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Reorder of persional detail questions</th>
+            <td class="govuk-table__cell">Assumption to be tested that reordering personal questions to name, address, NI number and contact preferences is more likely to match user mental model.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Reorder of text hyperlink and CTA button</th>
+            <td class="govuk-table__cell">Moved text hyperlink above the CTA instead of after due to importance in relation to address question.</td>
           </tr>
         </tbody>
       </table>
@@ -92,6 +104,7 @@
       </strong>
 
   <div>
+    <!-- we need to update link for content plan-->
     <br>
         <form class="form" action="/v1/jake-start" method="post">
 
