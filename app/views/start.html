@@ -1,0 +1,81 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Activity Credit prototypes
+      </h1>{{releaseVersion | log }}
+      <p>
+        Designing a service to encourage exercise in return for cash.
+      </p>
+
+<!-- section for version 2 content and documentation -->
+      <h2 class="govuk-heading-m">Version 2</h2>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--yellow">
+    In progress
+  </strong>
+
+  <div>
+    <form class="form" action="/v2/eligibility-checker" method="post">
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="https://miro.com/app/board/uXjVOFTMAEk=/">Miro board</a>
+        </li>
+        <li>
+          <a href="https://design-system.service.gov.uk">User research</a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/document/d/1dlW1NBlDWfJCvqvbONHYkMqLSSgh0YoM2oZjCPYRxtM/edit">Content plan</a>
+        </li>
+      </ul>
+
+      <!-- section for version 1 content and documentation-->
+      <button class="govuk-button" data-module="govuk-button">
+        Launch V2
+      </button>
+
+      <h2 class="govuk-heading-m">Version 2</h2>
+
+      <strong class="govuk-tag">
+        completed
+      </strong>
+
+  <div>
+        <form class="form" action="/v1/jake-start" method="post">
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="https://miro.com/app/board/uXjVOFTMAEk=/">Miro board</a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/presentation/d/1njTtIOZC09k0AgTHiD8Y6stY43x7Ig-3VdhA7WqYqIA/edit?usp=sharing">Show and tell slide deck</a>
+        </li>
+        <li>
+          <a href="https://design-system.service.gov.uk">Content plan</a>
+        </li>
+      </ul>
+
+          <button class="govuk-button" data-module="govuk-button">
+        Launch V1
+      </button>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  
+  
+
+{% endblock %}
